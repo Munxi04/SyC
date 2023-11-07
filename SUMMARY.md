@@ -8,4 +8,4 @@
   * [Softphones](configuracion-y-administracion-de-una-red-con-servicios-de-voip/softphones.md)
   * [Capturas](configuracion-y-administracion-de-una-red-con-servicios-de-voip/capturas.md)
 * [Configuración de OSPF](configuracion-de-ospf/README.md)
-  * [Conexión desde putty](configuracion-de-ospf/conexion-desde-putty.md)
+  * [Conexión desde PuTTY](configuracion-de-ospf/conexion-desde-putty.md)
