@@ -30,10 +30,18 @@ Se pueden tener abiertas hasta 4 ventanas de putty por router. Hay que tener abi
 {% tab title="Puerto correspondiente a cada Router" %}
 <figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption><p>Puertos de acceso mediante ssh</p></figcaption></figure>
 {% endtab %}
+
+{% tab title="Una vez dentro" %}
+| login as | password |
+| -------- | -------- |
+| cisco    | cisco    |
+{% endtab %}
 {% endtabs %}
 
-Como los routers vienen completamente limpios, lo primero que tenemos que hacer es ponerles  un host name:  `hostname PE_OESTE-A`.&#x20;
+Como los routers vienen completamente limpios, lo primero que tenemos que hacer es ponerles  un host name:  `hostname PE_OESTE-A`. En la[ ventana de puertos](conexion-desde-putty.md#puerto-correspondiente-a-cada-router) se puden ver los hostnames de cada Router.
 
 ```
-P
+Router>enable
+Router#configure terminal
+Router(config)#hostname <hostname>
 ```
