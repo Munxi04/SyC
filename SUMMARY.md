@@ -7,5 +7,5 @@
   * [Freepbx](configuracion-y-administracion-de-una-red-con-servicios-de-voip/freepbx.md)
   * [Softphones](configuracion-y-administracion-de-una-red-con-servicios-de-voip/softphones.md)
   * [Capturas](configuracion-y-administracion-de-una-red-con-servicios-de-voip/capturas.md)
-* [Configuración de OSPF](configuracion-de-ospf/README.md)
-  * [Conexión desde PuTTY](configuracion-de-ospf/conexion-desde-putty.md)
+* [Configuración y administración de una red IP con encaminamiento dinámico: OSPF](configuracion-y-administracion-de-una-red-ip-con-encaminamiento-dinamico-ospf/README.md)
+  * [Conexión desde PuTTY](configuracion-y-administracion-de-una-red-ip-con-encaminamiento-dinamico-ospf/conexion-desde-putty.md)
