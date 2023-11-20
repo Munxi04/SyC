@@ -22,7 +22,7 @@ layout:
 
 # Configuración y administración de una red IP con encaminamiento dinámico: OSPF
 
-&#x20;la primera sesión no tocamos ospf. Primero hay que [configurar los routers](conexion-desde-putty.md).
+La primera sesión no tocamos ospf. Primero hay que [configurar los routers](conexion-desde-putty.md).
 
 Una vez todas las interfaces están configuradas, nos adentramos en OSPF.
 
@@ -38,7 +38,7 @@ Router>enable
 Router#configure terminal
 Router(config)#router ospf <process-id>
 Router(config-router)#router-id <identificador>
-Router(config-router)#network <ip-address> <wildcard-mask> area <area-id> 
+Router(config-router)#network <ip-address> <wildcard-mask> area 0 
 ```
 {% endcode %}
 
@@ -73,6 +73,8 @@ Al finalizar esta configuración, se realizan varias capturas para comprobar que
 
 {% tab title="Show ip ospf neighbor" %}
 <figure><img src="../.gitbook/assets/show ip ospf neighbor.png" alt=""><figcaption><p>show ip ospf neiphbor</p></figcaption></figure>
+
+Con este comando podemos observar cuales son los DR y los BDR para ver las rutas que ha generado el OSPF.
 {% endtab %}
 
 {% tab title="Show ip ospf database" %}
@@ -84,3 +86,41 @@ Al finalizar esta configuración, se realizan varias capturas para comprobar que
 {% endtab %}
 {% endtabs %}
 
+***
+
+## OSPF Multiárea
+
+Para configurar en modo multiárea primero debemos borrar las configuraciones monoárea.
+
+```
+Router>enable
+Router#configure terminal
+Router(config)#no router ospf 1
+```
+
+Y a continuación, crearemos el perfil del OSPF multiárea.
+
+```
+Router#configure terminal
+Router(config)#router ospf 1
+Router(config-router)#router-id <identificador>
+Royter(config-router)#network <ip-address> <wildcard-mask> area <area-id>
+```
+
+Usaremos las mismas imágenes para los comandos que en el monoárea, y añadimos el `<area-id>`.
+
+{% tabs %}
+{% tab title="<identificador>" %}
+<figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption><p>Router ID</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="<ip-address>" %}
+<figure><img src="../.gitbook/assets/image (28).png" alt="" width="517"><figcaption><p>Divisiones para la red troncal y para enlaces entre routers del escenario A</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="<area-id>" %}
+<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption><p>OSPF multiárea</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
+El stubby simplifica&#x20;
