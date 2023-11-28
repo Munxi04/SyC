@@ -52,3 +52,29 @@ Switch(config)#end
 ```
 {% endtab %}
 {% endtabs %}
+
+***
+
+Una vez configurados todos los Switches podemos verificar el estado nuestras interfaces con el siguiente comando:
+
+<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption><p>Estado de interfaces del SW3-DC</p></figcaption></figure>
+
+También podemos verificar la configuración de las VLANs dentro de cada Switch:
+
+<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption><p>Configuración de VLAN en SW3-DC</p></figcaption></figure>
+
+Y el más importante de todos, podemos observar la configuración del Spanning-Tree con el comando `Switch#show spanning-tree`:
+
+{% tabs %}
+{% tab title="VLAN 200" %}
+<figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption><p>Ventas en SW3-DC</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="VLAN 400" %}
+<figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption><p>Finanzas en SW3-DC</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="VLAN 800" %}
+<figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption><p>RRHH en SW3-DC</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
