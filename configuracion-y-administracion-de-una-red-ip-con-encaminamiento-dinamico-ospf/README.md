@@ -44,7 +44,7 @@ Router(config-router)#network <ip-address> <wildcard-mask> area 0
 
 En `<process-id>` pondremos 1, por que así lo indica la práctica. En `<wildcard-mask>` pondremos la inversa de la máscara de red, para las /30 será 0.0.0.3 y para la /29 será 0.0.0.7
 
-Para el resto necesitamos tener un parde tablas en cuenta.
+Para el resto necesitamos tener un par de tablas en cuenta.
 
 {% tabs %}
 {% tab title="<identificador>" %}
